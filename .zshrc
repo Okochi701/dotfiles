@@ -1,3 +1,18 @@
+# after cd then ls -all
+chpwd() { eza -a  -l }
+
+alias gs='git status'
+alias ga='git add'
+alias gp='git push'
+alias gu='git restore --staged'
+gm () {
+    msg=$@
+    git commit -m "$msg"
+}
+
+
+
+
 if [ "$(uname -m)" = "arm64" ]; then
  eval "$(/opt/homebrew/bin/brew shellenv)"
  export PATH="/opt/homebrew/bin:$PATH"
